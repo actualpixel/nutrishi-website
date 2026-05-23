@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy — Nutrishi</title>
+  <meta
+    name="description"
+    content="Privacy Policy for Nutrishi, an offline-first nutrition, calorie, macro, water, weight, and meal planning app."
+  />
+
+  <style>
+    :root {
+      --bg: #eef6f1;
+      --surface: #ffffff;
+      --surface-soft: #f5faf7;
+      --primary: #2d6a4f;
+      --primary-dark: #1b4b34;
+      --text: #20242a;
+      --muted: #737d86;
+      --border: #dfeae3;
+      --accent: #e4f2ea;
+      --warning-bg: #fff7ed;
+      --warning-border: #fdba74;
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --shadow: 0 18px 50px rgba(27, 75, 52, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .container {
+      width: min(960px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 24px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 25px;
+      box-shadow: 0 10px 30px rgba(45, 106, 79, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .hero {
+      margin: 28px 0 42px;
+      padding: 38px;
+      border-radius: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      box-shadow: 0 30px 80px rgba(27, 75, 52, 0.22);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      right: -90px;
+      top: -90px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.13);
+      color: rgba(255,255,255,0.9);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .hero p {
+      margin: 18px 0 0;
+      max-width: 760px;
+      font-size: 22px;
+      color: rgba(255,255,255,0.82);
+      letter-spacing: -0.02em;
+    }
+
+    main {
+      padding-bottom: 60px;
+    }
+
+    .section-label {
+      margin: 34px 0 14px;
+      color: var(--primary);
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 18px;
+      background: var(--accent);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 19px;
+      letter-spacing: -0.015em;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    li {
+      color: var(--muted);
+      font-size: 19px;
+      padding-left: 26px;
+      position: relative;
+      letter-spacing: -0.015em;
+    }
+
+    li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 13px;
+    }
+
+    .quick-card {
+      min-height: 190px;
+    }
+
+    .quick-card h2 {
+      font-size: 24px;
+    }
+
+    .quick-card p {
+      font-size: 18px;
+    }
+
+    .warning {
+      background: var(--warning-bg);
+      border: 1px solid var(--warning-border);
+    }
+
+    .meta-card {
+      display: grid;
+      gap: 18px;
+    }
+
+    .meta-row {
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+
+    .meta-row:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .meta-row strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .meta-row span {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--primary);
+      font-weight: 900;
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    footer {
+      padding: 40px 0 60px;
+      color: var(--muted);
+      font-size: 15px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .card {
+        padding: 24px;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 28px, 960px);
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+
+      .hero p,
+      p,
+      li {
+        font-size: 17px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .brand {
+        font-size: 22px;
+      }
+
+      .nav-links {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="brand" aria-label="Nutrishi home">
+        <span class="brand-mark">n</span>
+        <span>Nutrishi</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Policy navigation">
+        <a href="/">Home</a>
+        <a href="mailto:support@nutrishi.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-content">
+          <div class="pill">Local only</div>
+          <h1>Privacy Policy</h1>
+          <p>
+            Nutrishi is offline-first by design. Your data stays on this device
+            unless you choose otherwise.
+          </p>
+          <p>
+            Your profile, food logs, water logs, weight records, goals, reminders,
+            and preferences are stored locally on your device at this stage.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-label">Quick privacy highlights</div>
+
+      <section class="highlight-grid" aria-label="Privacy highlights">
+        <article class="card quick-card">
+          <div class="card-header">
+            <div class="icon">⌾</div>
+          </div>
+          <h2>Stored locally</h2>
+          <p>Data stays on your device.</p>
+        </article>
+
+        <article class="card quick-card">
+          <div class="card-header">
+            <div class="icon">i</div>
+          </div>
+          <h2>No ads</h2>
+          <p>We do not use advertising trackers.</p>
+        </article>
+
+        <article class="card quick-card">
+          <div class="card-header">
+            <div class="icon">≡</div>
+          </div>
+          <h2>No selling</h2>
+          <p>We do not sell your health data.</p>
+        </article>
+      </section>
+
+      <div class="section-label">Detailed policy</div>
+
+      <section class="card">
+        <div class="card-header">
+          <div class="icon">⌾</div>
+          <h2>Information stored on your device</h2>
+        </div>
+
+        <ul>
+          <li>Profile details</li>
+          <li>Calorie and macro targets</li>
+          <li>Food logs and saved foods</li>
+          <li>Meal templates</li>
+          <li>Water logs and water goals</li>
+          <li>Weight records</li>
+          <li>Reminder and appearance preferences</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div class="icon">⌁</div>
+          <h2>How the app uses this information</h2>
+        </div>
+
+        <ul>
+          <li>Estimate calorie needs</li>
+          <li>Calculate macro targets</li>
+          <li>Track daily nutrition</li>
+          <li>Track hydration and weight history</li>
+          <li>Personalize local suggestions</li>
+          <li>Schedule local reminders if enabled</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div class="icon">i</div>
+          <h2>Data sharing</h2>
+        </div>
+
+        <p>
+          We do not sell, rent, or share your personal health or nutrition data
+          with advertisers or third parties. At this stage, the app does not send
+          your profile, food logs, water logs, or weight records to our servers.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div class="icon">◷</div>
+          <h2>Notifications and reminders</h2>
+        </div>
+
+        <p>
+          Reminders in this app are local check-ins. Notification permission may
+          be requested so meal, water, weight, and weekly progress reminders can
+          appear on your device. You can disable reminders from app settings or
+          from your device settings at any time.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div class="icon">≡</div>
+          <h2>Data control</h2>
+        </div>
+
+        <p>
+          You can edit your profile information inside the app and, where supported,
+          update logged entries from existing tracking flows. You can also reset
+          local data from Profile → Data & Privacy to remove locally stored
+          information from this device.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div class="icon">⚙</div>
+          <h2>App Lock</h2>
+        </div>
+
+        <p>
+          App Lock uses your device authentication to help protect access to Nutrishi.
+          Nutrishi does not store your Face ID, fingerprint, or biometric data.
+          Biometric authentication is handled by your device operating system.
+        </p>
+      </section>
+
+      <section class="card warning">
+        <div class="card-header">
+          <div class="icon">i</div>
+          <h2>Health disclaimer</h2>
+        </div>
+
+        <p>
+          This app is for general wellness and nutrition tracking only. It does not
+          provide medical advice, diagnosis, or treatment. Calorie, macro, water,
+          and BMI values are estimates. Consult a qualified healthcare professional
+          before making major diet, fitness, pregnancy, medical, or weight-loss
+          decisions.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Offline-first storage</h2>
+        <p>
+          Your data is stored locally on your device. If you uninstall the app,
+          clear app data, or reset local data, this information may be deleted
+          from the device.
+        </p>
+
+        <h3>Export and import</h3>
+        <p>
+          Nutrishi may allow you to export and import local backup files. These
+          files may contain personal nutrition and health-related information.
+          Keep backup files private and store them in a secure location. Nutrishi
+          does not upload these backup files unless you choose to share them using
+          your device’s share options.
+        </p>
+
+        <h3>Children</h3>
+        <p>
+          This app is intended for personal wellness tracking. It is not designed
+          for children without parent or guardian supervision.
+        </p>
+      </section>
+
+      <section class="card meta-card">
+        <div>
+          <h2>Privacy policy link</h2>
+          <p>
+            This page is the latest shared privacy policy document for Nutrishi.
+          </p>
+          <a class="button" href="https://nutrishi.com/privacy/">Open Privacy Policy</a>
+        </div>
+
+        <div class="meta-row">
+          <strong>Last updated</strong>
+          <span>May 2026</span>
+        </div>
+
+        <div class="meta-row">
+          <strong>Contact</strong>
+          <span>
+            <a href="mailto:support@nutrishi.com">support@nutrishi.com</a>
+          </span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Nutrishi. This policy may be updated as the app evolves.
+    </div>
+  </footer>
+</body>
+</html>
