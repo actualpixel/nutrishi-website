@@ -3,105 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nutrishi — Private Offline Calorie & Macro Tracker</title>
 
-<meta
-  name="description"
-  content="Nutrishi is a private, offline-first nutrition tracker for calories, macros, water, weight, and meal planning. No account required. Your data stays on your device."
-/>
+  <title>Nutrishi — Offline Calorie, Macro, Water & Weight Tracker</title>
+  <meta
+    name="description"
+    content="Nutrishi is a private offline-first nutrition tracker for calories, macros, water, weight, and meal planning. No account required."
+  />
+  <meta
+    name="keywords"
+    content="Nutrishi, calorie tracker, macro tracker, nutrition tracker, food diary, meal planner, water tracker, weight tracker, offline calorie tracker, private nutrition app"
+  />
+  <meta name="author" content="Nutrishi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nutrishi.com/" />
 
-<meta
-  name="keywords"
-  content="Nutrishi, calorie tracker, macro tracker, nutrition tracker, food diary, meal planner, water tracker, weight tracker, offline calorie tracker, private nutrition app"
-/>
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#2D6A4F" />
 
-<meta name="author" content="Nutrishi" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://nutrishi.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nutrishi.com/" />
+  <meta property="og:title" content="Nutrishi — Private Offline Nutrition Tracker" />
+  <meta
+    property="og:description"
+    content="Track calories, macros, water, weight, and meal plans privately. Offline-first. No account required."
+  />
+  <meta property="og:image" content="https://nutrishi.com/assets/feature-graphic.png" />
+  <meta property="og:site_name" content="Nutrishi" />
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="/assets/favicon.png" />
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-<meta name="theme-color" content="#2D6A4F" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nutrishi — Private Offline Nutrition Tracker" />
+  <meta
+    name="twitter:description"
+    content="Track calories, macros, water, weight, and meal plans privately. Offline-first. No account required."
+  />
+  <meta name="twitter:image" content="https://nutrishi.com/assets/feature-graphic.png" />
 
-<!-- Open Graph / Facebook / WhatsApp -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://nutrishi.com/" />
-<meta property="og:title" content="Nutrishi — Private Offline Calorie & Macro Tracker" />
-<meta
-  property="og:description"
-  content="Track calories, macros, water, weight, and meal plans privately. Offline-first. No account required."
-/>
-<meta property="og:image" content="https://nutrishi.com/assets/app-icon.png" />
-<meta property="og:site_name" content="Nutrishi" />
-
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Nutrishi — Private Offline Calorie & Macro Tracker" />
-<meta
-  name="twitter:description"
-  content="Track calories, macros, water, weight, and meal plans privately. Offline-first. No account required."
-/>
-<meta name="twitter:image" content="https://nutrishi.com/assets/app-icon.png" />
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  "name": "Nutrishi",
-  "operatingSystem": "Android, iOS",
-  "applicationCategory": "HealthApplication",
-  "description": "Nutrishi is a private, offline-first nutrition tracker for calories, macros, water, weight, and meal planning. No account required.",
-  "url": "https://nutrishi.com/",
-  "image": "https://nutrishi.com/assets/app-icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "INR"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Nutrishi",
+    "operatingSystem": "Android",
+    "applicationCategory": "HealthApplication",
+    "description": "Nutrishi is a private, offline-first nutrition tracker for calories, macros, water, weight, and meal planning. No account required.",
+    "url": "https://nutrishi.com/",
+    "image": "https://nutrishi.com/assets/app-icon.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    }
   }
-}
-</script>
+  </script>
 
   <style>
     :root {
       --bg: #eef6f1;
       --surface: #ffffff;
-      --surface-soft: #f5faf7;
+      --surface-soft: #f7fbf8;
       --primary: #2d6a4f;
       --primary-dark: #1b4b34;
+      --primary-deep: #0e2f21;
       --text: #20242a;
-      --muted: #7d8790;
+      --muted: #738079;
       --border: #dfeae3;
       --accent: #e4f2ea;
       --warning-bg: #fff7ed;
       --warning-border: #fdba74;
+      --radius-xl: 36px;
       --radius-lg: 28px;
       --radius-md: 20px;
       --shadow: 0 18px 50px rgba(27, 75, 52, 0.08);
+      --shadow-strong: 0 28px 80px rgba(27, 75, 52, 0.18);
+      --header-height: 84px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(45, 106, 79, 0.08), transparent 30%),
+        radial-gradient(circle at 92% 12%, rgba(45, 106, 79, 0.06), transparent 32%),
+        var(--bg);
       color: var(--text);
       line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      width: 100%;
+      padding-top: var(--header-height);
       overflow-x: hidden;
     }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { max-width: 100%; display: block; }
+
+    .page { width: 100%; }
 
     .container {
       width: min(1120px, calc(100% - 40px));
@@ -109,7 +108,19 @@
     }
 
     header {
-      padding: 28px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      background: rgba(238, 246, 241, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(223, 234, 227, 0.85);
     }
 
     .nav {
@@ -123,22 +134,17 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-weight: 850;
+      letter-spacing: -0.04em;
       font-size: 24px;
     }
 
     .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 25px;
-      box-shadow: 0 10px 30px rgba(45, 106, 79, 0.25);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(45, 106, 79, 0.24);
     }
 
     .nav-links {
@@ -147,21 +153,25 @@
       gap: 18px;
       color: var(--muted);
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-download {
+      color: #fff !important;
+      background: var(--primary);
+      border-radius: 999px;
+      padding: 10px 16px;
+      box-shadow: 0 10px 24px rgba(45, 106, 79, 0.2);
     }
 
-    .hero {
-      padding: 56px 0 72px;
-    }
+    .hero { padding: 54px 0 72px; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 36px;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 44px;
       align-items: center;
     }
 
@@ -173,7 +183,7 @@
       border-radius: 999px;
       background: var(--accent);
       color: var(--primary);
-      font-weight: 800;
+      font-weight: 850;
       font-size: 13px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -182,16 +192,16 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(44px, 7vw, 84px);
+      font-size: clamp(44px, 7vw, 82px);
       line-height: 0.98;
-      letter-spacing: -0.065em;
+      letter-spacing: -0.07em;
       color: var(--text);
     }
 
     .hero-copy {
       margin: 26px 0 0;
-      max-width: 640px;
-      font-size: clamp(18px, 2.2vw, 24px);
+      max-width: 650px;
+      font-size: clamp(18px, 2.1vw, 23px);
       color: var(--muted);
       letter-spacing: -0.02em;
     }
@@ -207,18 +217,18 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 54px;
+      gap: 10px;
+      min-height: 56px;
       padding: 0 24px;
       border-radius: 999px;
-      font-weight: 800;
+      font-weight: 850;
       font-size: 16px;
       border: 1px solid transparent;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
+      white-space: nowrap;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -232,63 +242,130 @@
       border-color: var(--border);
     }
 
-    .phone-card {
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .hero-proof span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.58);
+      border-radius: 999px;
+    }
+
+    .hero-visual {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      border-radius: 42px;
-      padding: 28px;
-      min-height: 560px;
-      box-shadow: 0 30px 80px rgba(27, 75, 52, 0.24);
+      border-radius: 44px;
+      padding: 30px;
+      min-height: 590px;
+      box-shadow: var(--shadow-strong);
       position: relative;
       overflow: hidden;
     }
 
-    .phone-card::before {
+    .hero-visual::before {
       content: "";
       position: absolute;
-      width: 300px;
-      height: 300px;
-      right: -80px;
-      top: -80px;
+      width: 340px;
+      height: 340px;
+      right: -95px;
+      top: -95px;
       border-radius: 50%;
       background: rgba(255,255,255,0.08);
     }
 
-    .phone-inner {
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      left: -120px;
+      bottom: -120px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .app-preview {
       position: relative;
+      z-index: 1;
+      height: 100%;
       background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 32px;
       padding: 24px;
       color: white;
-      height: 100%;
     }
 
-    .phone-title {
-      font-size: 18px;
-      opacity: 0.8;
-      font-weight: 700;
-      margin-bottom: 12px;
+    .preview-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 26px;
     }
 
-    .phone-number {
-      font-size: 58px;
+    .preview-label {
+      font-size: 15px;
+      color: rgba(255,255,255,0.68);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .preview-pill {
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .preview-number {
+      font-size: clamp(58px, 8vw, 84px);
+      line-height: 0.95;
       font-weight: 900;
-      letter-spacing: -0.06em;
-      line-height: 1;
+      letter-spacing: -0.07em;
     }
 
-    .phone-sub {
+    .preview-sub {
       margin-top: 8px;
-      color: rgba(255,255,255,0.75);
-      font-size: 16px;
-      font-weight: 600;
+      color: rgba(255,255,255,0.76);
+      font-size: 17px;
+      font-weight: 650;
+    }
+
+    .preview-progress {
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      overflow: hidden;
+      margin: 32px 0;
+    }
+
+    .preview-progress span {
+      display: block;
+      width: 42%;
+      height: 100%;
+      border-radius: 999px;
+      background: #74d39a;
     }
 
     .mini-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
-      margin-top: 30px;
+      margin-top: 10px;
     }
 
     .mini-card {
@@ -300,33 +377,63 @@
 
     .mini-card strong {
       display: block;
-      font-size: 26px;
-      letter-spacing: -0.04em;
+      font-size: 27px;
+      letter-spacing: -0.045em;
       margin-top: 8px;
     }
 
     .mini-card span {
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.72);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
-    section {
-      padding: 56px 0;
-    }
+    section { padding: 58px 0; }
 
     .section-title {
       margin: 0 0 14px;
-      font-size: clamp(34px, 4vw, 52px);
-      letter-spacing: -0.055em;
+      font-size: clamp(34px, 4vw, 54px);
+      letter-spacing: -0.06em;
       line-height: 1.05;
     }
 
     .section-copy {
       margin: 0 0 34px;
-      max-width: 760px;
+      max-width: 780px;
       color: var(--muted);
       font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      align-items: end;
+    }
+
+    .screenshot-card {
+      background: linear-gradient(180deg, #ffffff, #f8fbf9);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .screenshot-card img {
+      width: 100%;
+      aspect-ratio: 9 / 19.5;
+      border-radius: 22px;
+      object-fit: cover;
+      object-position: top center;
+      background: var(--surface-soft);
+      border: 1px solid rgba(45, 106, 79, 0.08);
+    }
+
+    .screenshot-card strong {
+      display: block;
+      margin-top: 14px;
+      font-size: 15px;
       letter-spacing: -0.02em;
     }
 
@@ -359,7 +466,7 @@
     .card h3 {
       margin: 0 0 10px;
       font-size: 24px;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.04em;
       line-height: 1.15;
     }
 
@@ -369,7 +476,7 @@
       font-size: 17px;
     }
 
-    .privacy-band {
+    .split-band {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 36px;
@@ -381,7 +488,7 @@
       align-items: center;
     }
 
-    .privacy-band ul {
+    .split-band ul {
       margin: 18px 0 0;
       padding: 0;
       list-style: none;
@@ -391,11 +498,60 @@
       font-size: 18px;
     }
 
-    .privacy-band li::before {
+    .split-band li::before {
       content: "•";
       color: var(--primary);
       font-weight: 900;
       margin-right: 10px;
+    }
+
+    .download-band {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 40px;
+      padding: 42px;
+      color: white;
+      box-shadow: var(--shadow-strong);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .download-band::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      right: -90px;
+      top: -120px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .download-band-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .download-band h2 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 50px);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+    }
+
+    .download-band p {
+      margin: 12px 0 0;
+      color: rgba(255,255,255,0.78);
+      font-size: 19px;
+    }
+
+    .download-band .btn {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.12);
     }
 
     .disclaimer {
@@ -409,8 +565,10 @@
     .disclaimer h3 {
       margin: 0 0 10px;
       font-size: 24px;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.04em;
     }
+
+    .disclaimer p { margin: 0; color: #5f5142; }
 
     footer {
       padding: 52px 0;
@@ -427,59 +585,76 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 880px) {
+    .footer-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover { color: var(--primary); }
+
+    @media (max-width: 520px) {
+      :root { --header-height: 74px; }
+    }
+
+    @media (max-width: 960px) {
       .hero-grid,
-      .privacy-band {
+      .split-band,
+      .download-band-content {
         grid-template-columns: 1fr;
       }
 
+      .screenshots-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards { grid-template-columns: 1fr 1fr; }
+
+      .hero-visual { min-height: auto; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, 1120px); }
+
+      .nav {
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .nav-links {
+        gap: 10px;
+        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav-download { padding: 8px 12px; }
+
+      .hero { padding: 34px 0 48px; }
+
+      .hero-actions { flex-direction: column; }
+
+      .btn { width: 100%; }
+
+      .screenshots-grid,
       .cards {
         grid-template-columns: 1fr;
       }
 
-      .phone-card {
-        min-height: auto;
-      }
-
-      .nav {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        gap: 12px;
-        font-size: 14px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .container {
-        width: min(100% - 28px, 1120px);
-      }
-
-      header {
-        padding: 20px 0;
-      }
-
-      .brand {
-        font-size: 22px;
-      }
-
-      .hero {
-        padding-top: 34px;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
+      .hero-visual,
       .card,
-      .privacy-band,
+      .split-band,
+      .download-band,
       .disclaimer {
         padding: 22px;
+      }
+
+      .brand { font-size: 22px; }
+
+      .section-copy,
+      .split-band ul,
+      .download-band p {
+        font-size: 17px;
       }
     }
   </style>
@@ -490,13 +665,15 @@
     <header>
       <div class="container nav">
         <a href="/" class="brand" aria-label="Nutrishi home">
-          <img src="/assets/favicon.png" alt="icon" class="brand-mark"/>
+          <img src="/assets/favicon.png" alt="Nutrishi icon" class="brand-mark" />
           <span>Nutrishi</span>
         </a>
 
         <nav class="nav-links" aria-label="Main navigation">
+          <a href="#screenshots">Screenshots</a>
           <a href="#features">Features</a>
           <a href="#privacy">Privacy</a>
+          <a class="nav-download" href="https://play.google.com/store/apps/details?id=com.nutrishiapp" target="_blank" rel="noopener">Google Play</a>
         </nav>
       </div>
     </header>
@@ -505,44 +682,88 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <div class="eyebrow">Offline-first nutrition tracking</div>
-            <h1>Simple nutrition tracking. Private by design.</h1>
+            <div class="eyebrow">Now available on Google Play</div>
+            <h1>Private nutrition tracking without the clutter.</h1>
             <p class="hero-copy">
-              Nutrishi helps you track calories, macros, water, weight, and meal plans
-              with a calm local-first experience. No account required.
+              Nutrishi helps you track calories, macros, water, weight, and meal plans with a calm offline-first experience.
+              No account required. Your data stays on your device.
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#download">Coming soon</a>
+              <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.nutrishiapp" target="_blank" rel="noopener">
+                Download on Google Play
+              </a>
               <a class="btn btn-secondary" href="/privacy/">Read Privacy Policy</a>
+            </div>
+
+            <div class="hero-proof" aria-label="Nutrishi privacy highlights">
+              <span>✓ Offline-first</span>
+              <span>✓ No account required</span>
+              <span>✓ Local data control</span>
             </div>
           </div>
 
-          <div class="phone-card" aria-label="Nutrishi app preview">
-            <div class="phone-inner">
-              <div class="phone-title">Today</div>
-              <div class="phone-number">2,150</div>
-              <div class="phone-sub">kcal daily target</div>
+          <div class="hero-visual" aria-label="Nutrishi app preview">
+            <div class="app-preview">
+              <div class="preview-topline">
+                <div class="preview-label">Today</div>
+                <div class="preview-pill">Private by design</div>
+              </div>
+
+              <div class="preview-number">1,930</div>
+              <div class="preview-sub">kcal daily target</div>
+              <div class="preview-progress"><span></span></div>
 
               <div class="mini-grid">
                 <div class="mini-card">
                   <span>Protein</span>
-                  <strong>134g</strong>
+                  <strong>154g</strong>
+                </div>
+                <div class="mini-card">
+                  <span>Carbs</span>
+                  <strong>183g</strong>
                 </div>
                 <div class="mini-card">
                   <span>Water</span>
-                  <strong>2.5L</strong>
+                  <strong>3.1L</strong>
                 </div>
                 <div class="mini-card">
                   <span>Weight</span>
                   <strong>70kg</strong>
                 </div>
-                <div class="mini-card">
-                  <span>Plan</span>
-                  <strong>4 meals</strong>
-                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="screenshots">
+        <div class="container">
+          <h2 class="section-title">Simple tracking. Clean progress.</h2>
+          <p class="section-copy">
+            Track your daily nutrition, plan meals, log water, and review progress without overwhelming dashboards.
+          </p>
+
+          <div class="screenshots-grid">
+            <article class="screenshot-card">
+              <img src="/assets/screenshots/home.png" alt="Nutrishi dashboard screenshot" />
+              <strong>Daily dashboard</strong>
+            </article>
+
+            <article class="screenshot-card">
+              <img src="/assets/screenshots/plan.png" alt="Nutrishi meal plan screenshot" />
+              <strong>Meal planning</strong>
+            </article>
+
+            <article class="screenshot-card">
+              <img src="/assets/screenshots/progress.png" alt="Nutrishi progress screenshot" />
+              <strong>Progress insights</strong>
+            </article>
+
+            <article class="screenshot-card">
+              <img src="/assets/screenshots/hydration.png" alt="Nutrishi hydration screenshot" />
+              <strong>Water tracking</strong>
+            </article>
           </div>
         </div>
       </section>
@@ -551,45 +772,44 @@
         <div class="container">
           <h2 class="section-title">Built for daily consistency, not complexity.</h2>
           <p class="section-copy">
-            Nutrishi keeps the core nutrition tools simple so you can log, plan, and review
-            your progress without turning food tracking into a second job.
+            Nutrishi focuses on the essential tools people actually need for nutrition tracking.
           </p>
 
           <div class="cards">
             <article class="card">
               <div class="icon">🍽</div>
-              <h3>Food logging</h3>
-              <p>Log calories and macros manually or from your local food database.</p>
+              <h3>Calories & macros</h3>
+              <p>Track calories, protein, carbs, fat, and fiber in a simple daily view.</p>
             </article>
 
             <article class="card">
               <div class="icon">📋</div>
               <h3>Meal planning</h3>
-              <p>Plan meals before you eat and adjust your calories/macros for the day.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">📈</div>
-              <h3>Progress trends</h3>
-              <p>Review nutrition, water, and weight trends over time.</p>
+              <p>Plan breakfast, lunch, dinner, and snacks before the day starts.</p>
             </article>
 
             <article class="card">
               <div class="icon">💧</div>
               <h3>Water tracking</h3>
-              <p>Track hydration with simple daily water logs and reminders.</p>
+              <p>Log drinks and stay consistent with hydration goals.</p>
             </article>
 
             <article class="card">
               <div class="icon">⚖</div>
               <h3>Weight history</h3>
-              <p>Monitor your weight check-ins and understand your trend.</p>
+              <p>Record weight check-ins and understand your trend over time.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon">⇄</div>
+              <h3>Export & import</h3>
+              <p>Create local backups and restore your Nutrishi data when needed.</p>
             </article>
 
             <article class="card">
               <div class="icon">🔒</div>
               <h3>App Lock</h3>
-              <p>Use device authentication to help protect access to Nutrishi.</p>
+              <p>Protect app access with your device authentication.</p>
             </article>
           </div>
         </div>
@@ -597,13 +817,12 @@
 
       <section id="privacy">
         <div class="container">
-          <div class="privacy-band">
+          <div class="split-band">
             <div>
-              <div class="eyebrow">Local only</div>
+              <div class="eyebrow">Privacy-first</div>
               <h2 class="section-title">Your data stays on your device.</h2>
               <p class="section-copy">
-                Nutrishi is designed as an offline-first app. Your profile, logs, goals,
-                preferences, and history are stored locally unless you choose to export or share them.
+                Nutrishi is designed as an offline-first app. Your profile, logs, goals, preferences, and history are stored locally unless you choose to export or share them.
               </p>
             </div>
 
@@ -620,15 +839,50 @@
         </div>
       </section>
 
+      <section id="who">
+        <div class="container">
+          <div class="split-band">
+            <div>
+              <div class="eyebrow">Who it is for</div>
+              <h2 class="section-title">For people who want nutrition tracking without noise.</h2>
+            </div>
+
+            <div>
+              <ul>
+                <li>Understand daily calories and macros</li>
+                <li>Plan meals before eating</li>
+                <li>Track hydration and weight progress</li>
+                <li>Avoid account-based tracking apps</li>
+                <li>Keep wellness data local and controlled</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="download">
+        <div class="container">
+          <div class="download-band">
+            <div class="download-band-content">
+              <div>
+                <h2>Start tracking with Nutrishi.</h2>
+                <p>Available now on Google Play. Private, offline-first, and built for daily consistency.</p>
+              </div>
+
+              <a class="btn" href="https://play.google.com/store/apps/details?id=com.nutrishiapp" target="_blank" rel="noopener">
+                Download on Google Play
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="disclaimer">
         <div class="container">
           <div class="disclaimer">
             <h3>Health disclaimer</h3>
             <p>
-              Nutrishi is for general wellness and nutrition tracking only. It does not provide
-              medical advice, diagnosis, or treatment. Calorie, macro, water, and BMI values are
-              estimates. Consult a qualified healthcare professional before making major diet,
-              fitness, pregnancy, medical, or weight-loss decisions.
+              Nutrishi is for general wellness and nutrition tracking only. It does not provide medical advice, diagnosis, or treatment. Calorie, macro, water, and BMI values are estimates. Consult a qualified healthcare professional before making major diet, fitness, pregnancy, medical, or weight-loss decisions.
             </p>
           </div>
         </div>
@@ -638,9 +892,9 @@
     <footer>
       <div class="container footer-inner">
         <div>© 2026 Nutrishi. All rights reserved.</div>
-        <div>
+        <div class="footer-links">
+          <a href="https://play.google.com/store/apps/details?id=com.nutrishiapp" target="_blank" rel="noopener">Google Play</a>
           <a href="/privacy/">Privacy Policy</a>
-          ·
           <a href="mailto:support@nutrishi.com">support@nutrishi.com</a>
         </div>
       </div>

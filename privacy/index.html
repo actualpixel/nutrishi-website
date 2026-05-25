@@ -5,60 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Privacy Policy — Nutrishi</title>
+  <meta
+    name="description"
+    content="Read the Privacy Policy for Nutrishi, a private offline-first nutrition tracker. Learn how Nutrishi stores profile, food, water, weight, reminder, export/import, and app lock data locally on your device."
+  />
+  <meta
+    name="keywords"
+    content="Nutrishi privacy policy, Nutrishi app privacy, offline nutrition tracker privacy, calorie tracker privacy"
+  />
+  <meta name="author" content="Nutrishi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nutrishi.com/privacy/" />
 
-<meta
-  name="description"
-  content="Read the Privacy Policy for Nutrishi, a private offline-first nutrition tracker. Learn how Nutrishi stores profile, food, water, weight, reminder, and app lock data locally on your device."
-/>
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#2D6A4F" />
 
-<meta
-  name="keywords"
-  content="Nutrishi privacy policy, Nutrishi app privacy, offline nutrition tracker privacy, calorie tracker privacy"
-/>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nutrishi.com/privacy/" />
+  <meta property="og:title" content="Privacy Policy — Nutrishi" />
+  <meta
+    property="og:description"
+    content="Nutrishi is offline-first by design. Your nutrition, water, weight, and profile data stays on your device unless you choose otherwise."
+  />
+  <meta property="og:image" content="https://nutrishi.com/assets/feature-graphic.png" />
+  <meta property="og:site_name" content="Nutrishi" />
 
-<meta name="author" content="Nutrishi" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://nutrishi.com/privacy/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy — Nutrishi" />
+  <meta
+    name="twitter:description"
+    content="Nutrishi is offline-first by design. Your data stays on your device unless you choose otherwise."
+  />
+  <meta name="twitter:image" content="https://nutrishi.com/assets/feature-graphic.png" />
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="/assets/favicon.png" />
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-<meta name="theme-color" content="#2D6A4F" />
-
-<!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://nutrishi.com/privacy/" />
-<meta property="og:title" content="Privacy Policy — Nutrishi" />
-<meta
-  property="og:description"
-  content="Nutrishi is offline-first by design. Your nutrition, water, weight, and profile data stays on your device unless you choose otherwise."
-/>
-<meta property="og:image" content="https://nutrishi.com/assets/app-icon.png" />
-<meta property="og:site_name" content="Nutrishi" />
-
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Privacy Policy — Nutrishi" />
-<meta
-  name="twitter:description"
-  content="Nutrishi is offline-first by design. Your data stays on your device unless you choose otherwise."
-/>
-<meta name="twitter:image" content="https://nutrishi.com/assets/app-icon.png" />
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "PrivacyPolicy",
-  "name": "Privacy Policy — Nutrishi",
-  "url": "https://nutrishi.com/privacy/",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Nutrishi",
-    "url": "https://nutrishi.com/"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy — Nutrishi",
+    "url": "https://nutrishi.com/privacy/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nutrishi",
+      "url": "https://nutrishi.com/"
+    }
   }
-}
-</script>
+  </script>
 
   <style>
     :root {
@@ -74,13 +67,11 @@
       --warning-bg: #fff7ed;
       --warning-border: #fdba74;
       --radius-lg: 28px;
-      --radius-md: 20px;
       --shadow: 0 18px 50px rgba(27, 75, 52, 0.08);
+      --header-height: 84px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -88,12 +79,14 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
+      padding-top: var(--header-height);
+      overflow-x: hidden;
     }
 
     a {
       color: var(--primary);
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .container {
@@ -102,7 +95,19 @@
     }
 
     header {
-      padding: 28px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      background: rgba(238, 246, 241, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(223, 234, 227, 0.85);
     }
 
     .nav {
@@ -116,24 +121,19 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-weight: 850;
+      letter-spacing: -0.04em;
       font-size: 24px;
       color: var(--text);
       text-decoration: none;
     }
 
     .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 25px;
-      box-shadow: 0 10px 30px rgba(45, 106, 79, 0.25);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(45, 106, 79, 0.24);
     }
 
     .nav-links {
@@ -141,7 +141,15 @@
       gap: 16px;
       color: var(--muted);
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 750;
+      align-items: center;
+    }
+
+    .download-link {
+      color: white;
+      background: var(--primary);
+      border-radius: 999px;
+      padding: 9px 14px;
     }
 
     .hero {
@@ -166,10 +174,7 @@
       top: -90px;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
+    .hero-content { position: relative; z-index: 1; }
 
     .pill {
       display: inline-flex;
@@ -179,7 +184,7 @@
       background: rgba(255,255,255,0.13);
       color: rgba(255,255,255,0.9);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 850;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-bottom: 18px;
@@ -189,7 +194,7 @@
       margin: 0;
       font-size: clamp(42px, 6vw, 72px);
       line-height: 1;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.065em;
     }
 
     .hero p {
@@ -200,9 +205,7 @@
       letter-spacing: -0.02em;
     }
 
-    main {
-      padding-bottom: 60px;
-    }
+    main { padding-bottom: 60px; }
 
     .section-label {
       margin: 34px 0 14px;
@@ -296,27 +299,16 @@
       top: 13px;
     }
 
-    .quick-card {
-      min-height: 190px;
-    }
-
-    .quick-card h2 {
-      font-size: 24px;
-    }
-
-    .quick-card p {
-      font-size: 18px;
-    }
+    .quick-card { min-height: 190px; }
+    .quick-card h2 { font-size: 24px; }
+    .quick-card p { font-size: 18px; }
 
     .warning {
       background: var(--warning-bg);
       border: 1px solid var(--warning-border);
     }
 
-    .meta-card {
-      display: grid;
-      gap: 18px;
-    }
+    .meta-card { display: grid; gap: 18px; }
 
     .meta-row {
       border-top: 1px solid var(--border);
@@ -361,18 +353,12 @@
     }
 
     @media (max-width: 760px) {
-      .highlight-grid {
-        grid-template-columns: 1fr;
-      }
+      .highlight-grid { grid-template-columns: 1fr; }
 
       .hero,
-      .card {
-        padding: 24px;
-      }
+      .card { padding: 24px; }
 
-      .nav {
-        align-items: flex-start;
-      }
+      .nav { align-items: flex-start; }
 
       .nav-links {
         flex-wrap: wrap;
@@ -381,31 +367,20 @@
     }
 
     @media (max-width: 520px) {
-      .container {
-        width: min(100% - 28px, 960px);
-      }
+      :root { --header-height: 74px; }
+      .container { width: min(100% - 28px, 960px); }
 
-      h1 {
-        font-size: 44px;
-      }
+      h1 { font-size: 44px; }
 
       .hero p,
       p,
-      li {
-        font-size: 17px;
-      }
+      li { font-size: 17px; }
 
-      h2 {
-        font-size: 26px;
-      }
+      h2 { font-size: 26px; }
 
-      .brand {
-        font-size: 22px;
-      }
+      .brand { font-size: 22px; }
 
-      .nav-links {
-        font-size: 14px;
-      }
+      .nav-links { font-size: 14px; }
     }
   </style>
 </head>
@@ -414,13 +389,14 @@
   <header>
     <div class="container nav">
       <a href="/" class="brand" aria-label="Nutrishi home">
-        <img src="/assets/favicon.png" alt="icon" class="brand-mark"/>
+        <img src="/assets/favicon.png" alt="Nutrishi icon" class="brand-mark" />
         <span>Nutrishi</span>
       </a>
 
       <nav class="nav-links" aria-label="Policy navigation">
         <a href="/">Home</a>
         <a href="mailto:support@nutrishi.com">Contact</a>
+        <a class="download-link" href="PASTE_GOOGLE_PLAY_URL_HERE" target="_blank" rel="noopener">Google Play</a>
       </nav>
     </div>
   </header>
@@ -432,12 +408,10 @@
           <div class="pill">Local only</div>
           <h1>Privacy Policy</h1>
           <p>
-            Nutrishi is offline-first by design. Your data stays on this device
-            unless you choose otherwise.
+            Nutrishi is offline-first by design. Your data stays on your device unless you choose to export or share it.
           </p>
           <p>
-            Your profile, food logs, water logs, weight records, goals, reminders,
-            and preferences are stored locally on your device at this stage.
+            Your profile, food logs, water logs, weight records, goals, reminders, preferences, and local backups are stored locally on your device in the current version.
           </p>
         </div>
       </section>
@@ -450,7 +424,7 @@
             <div class="icon">⌾</div>
           </div>
           <h2>Stored locally</h2>
-          <p>Data stays on your device.</p>
+          <p>Nutrition, water, weight, and profile data stays on your device.</p>
         </article>
 
         <article class="card quick-card">
@@ -458,7 +432,7 @@
             <div class="icon">i</div>
           </div>
           <h2>No ads</h2>
-          <p>We do not use advertising trackers.</p>
+          <p>We do not use advertising trackers in the current version.</p>
         </article>
 
         <article class="card quick-card">
@@ -466,7 +440,7 @@
             <div class="icon">≡</div>
           </div>
           <h2>No selling</h2>
-          <p>We do not sell your health data.</p>
+          <p>We do not sell your health or nutrition data.</p>
         </article>
       </section>
 
@@ -479,13 +453,13 @@
         </div>
 
         <ul>
-          <li>Profile details</li>
-          <li>Calorie and macro targets</li>
-          <li>Food logs and saved foods</li>
-          <li>Meal templates</li>
-          <li>Water logs and water goals</li>
-          <li>Weight records</li>
-          <li>Reminder and appearance preferences</li>
+          <li>Profile details such as name, gender, age/date of birth, height, and weight</li>
+          <li>Calorie, macro, water, and weight goals</li>
+          <li>Food logs, saved foods, custom foods, and meal templates</li>
+          <li>Meal plans and planned food items</li>
+          <li>Water logs and hydration records</li>
+          <li>Weight records and progress history</li>
+          <li>Reminder, appearance, app lock, and other app preferences</li>
         </ul>
       </section>
 
@@ -496,25 +470,40 @@
         </div>
 
         <ul>
-          <li>Estimate calorie needs</li>
-          <li>Calculate macro targets</li>
-          <li>Track daily nutrition</li>
-          <li>Track hydration and weight history</li>
-          <li>Personalize local suggestions</li>
+          <li>Estimate calorie needs and daily nutrition targets</li>
+          <li>Calculate macro targets and progress summaries</li>
+          <li>Track daily nutrition, hydration, meal plans, and weight history</li>
+          <li>Show local insights based on your own app data</li>
           <li>Schedule local reminders if enabled</li>
+          <li>Protect access with App Lock if enabled</li>
         </ul>
       </section>
 
       <section class="card">
         <div class="card-header">
           <div class="icon">i</div>
-          <h2>Data sharing</h2>
+          <h2>Data collection and sharing</h2>
         </div>
 
         <p>
-          We do not sell, rent, or share your personal health or nutrition data
-          with advertisers or third parties. At this stage, the app does not send
-          your profile, food logs, water logs, or weight records to our servers.
+          In the current version, Nutrishi does not require an account and does not send your profile, food logs, water logs, meal plans, weight records, or goals to our servers.
+        </p>
+        <p>
+          We do not sell, rent, or share your personal health or nutrition data with advertisers or third parties.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div class="icon">⇄</div>
+          <h2>Export and import backups</h2>
+        </div>
+
+        <p>
+          Nutrishi may allow you to export and import local backup files. These files can contain personal nutrition and health-related information.
+        </p>
+        <p>
+          Keep backup files private and store them securely. Nutrishi does not upload backup files unless you choose to share them using your device’s share options.
         </p>
       </section>
 
@@ -525,24 +514,21 @@
         </div>
 
         <p>
-          Reminders in this app are local check-ins. Notification permission may
-          be requested so meal, water, weight, and weekly progress reminders can
-          appear on your device. You can disable reminders from app settings or
-          from your device settings at any time.
+          Reminders are local check-ins. Notification permission may be requested so meal, water, weight, and weekly progress reminders can appear on your device. You can disable reminders from app settings or from your device settings at any time.
         </p>
       </section>
 
       <section class="card">
         <div class="card-header">
           <div class="icon">≡</div>
-          <h2>Data control</h2>
+          <h2>Data control and deletion</h2>
         </div>
 
         <p>
-          You can edit your profile information inside the app and, where supported,
-          update logged entries from existing tracking flows. You can also reset
-          local data from Profile → Data & Privacy to remove locally stored
-          information from this device.
+          You can edit profile details and logged entries inside the app where supported. You can also reset local data from Profile → Data & Privacy to remove locally stored Nutrishi information from this device.
+        </p>
+        <p>
+          If you uninstall the app, clear app data, change devices without importing a backup, or reset local data, your local Nutrishi data may be deleted from the device.
         </p>
       </section>
 
@@ -553,9 +539,7 @@
         </div>
 
         <p>
-          App Lock uses your device authentication to help protect access to Nutrishi.
-          Nutrishi does not store your Face ID, fingerprint, or biometric data.
-          Biometric authentication is handled by your device operating system.
+          App Lock uses your device authentication to help protect access to Nutrishi. Nutrishi does not store your Face ID, fingerprint, or biometric data. Biometric authentication is handled by your device operating system.
         </p>
       </section>
 
@@ -566,46 +550,23 @@
         </div>
 
         <p>
-          This app is for general wellness and nutrition tracking only. It does not
-          provide medical advice, diagnosis, or treatment. Calorie, macro, water,
-          and BMI values are estimates. Consult a qualified healthcare professional
-          before making major diet, fitness, pregnancy, medical, or weight-loss
-          decisions.
+          Nutrishi is for general wellness and nutrition tracking only. It does not provide medical advice, diagnosis, or treatment. Calorie, macro, water, and BMI values are estimates. Consult a qualified healthcare professional before making major diet, fitness, pregnancy, medical, or weight-loss decisions.
         </p>
       </section>
 
       <section class="card">
-        <h2>Offline-first storage</h2>
+        <h2>Children</h2>
         <p>
-          Your data is stored locally on your device. If you uninstall the app,
-          clear app data, or reset local data, this information may be deleted
-          from the device.
+          Nutrishi is intended for adults and is not designed for children without parent or guardian supervision.
         </p>
 
-        <h3>Export and import</h3>
+        <h3>Changes to this policy</h3>
         <p>
-          Nutrishi may allow you to export and import local backup files. These
-          files may contain personal nutrition and health-related information.
-          Keep backup files private and store them in a secure location. Nutrishi
-          does not upload these backup files unless you choose to share them using
-          your device’s share options.
-        </p>
-
-        <h3>Children</h3>
-        <p>
-          This app is intended for personal wellness tracking. It is not designed
-          for children without parent or guardian supervision.
+          This policy may be updated as Nutrishi evolves. If future versions add account login, cloud sync, analytics, crash reporting, ads, subscriptions, or server-side features, this policy and relevant store declarations should be updated before release.
         </p>
       </section>
 
       <section class="card meta-card">
-        <div>
-          <h2>Privacy policy link</h2>
-          <p>
-            This page is the latest shared privacy policy document for Nutrishi.
-          </p>
-          <a class="button" href="https://nutrishi.com/privacy/">Open Privacy Policy</a>
-        </div>
 
         <div class="meta-row">
           <strong>Last updated</strong>
@@ -614,9 +575,7 @@
 
         <div class="meta-row">
           <strong>Contact</strong>
-          <span>
-            <a href="mailto:support@nutrishi.com">support@nutrishi.com</a>
-          </span>
+          <span><a href="mailto:support@nutrishi.com">support@nutrishi.com</a></span>
         </div>
       </section>
     </div>
