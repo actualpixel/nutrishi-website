@@ -177,6 +177,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      position: relative;
     }
 
     .brand {
@@ -203,10 +204,37 @@
       color: var(--muted);
       font-size: 15px;
       font-weight: 700;
+      justify-content: flex-end;
     }
 
     .nav-links a:hover {
       color: var(--primary);
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--primary-deep);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(27, 75, 52, 0.08);
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
     .nav-download {
@@ -744,6 +772,7 @@
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .footer-links a:hover {
@@ -757,6 +786,63 @@
     }
 
     @media (max-width: 960px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.97);
+        box-shadow: 0 24px 48px rgba(27, 75, 52, 0.14);
+      }
+
+      .nav.is-open .nav-links {
+        display: flex;
+      }
+
+      .nav.is-open .nav-toggle span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .nav.is-open .nav-toggle span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav.is-open .nav-toggle span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      .nav-links a {
+        width: 100%;
+      }
+
+      .nav-links a:not(.nav-download) {
+        padding: 4px 2px;
+      }
+
+      .nav-download {
+        justify-content: center;
+      }
+
+      .footer-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+
 
       .hero-grid,
       .split-band,
@@ -782,16 +868,9 @@
         width: min(100% - 28px, 1120px);
       }
 
-      .nav {
-        align-items: flex-start;
-        gap: 14px;
-      }
-
       .nav-links {
-        gap: 10px;
         font-size: 13px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        padding: 16px;
       }
 
       .nav-download {
@@ -831,10 +910,25 @@
         font-size: 22px;
       }
 
+      .footer-links {
+        gap: 12px 18px;
+      }
+
       .section-copy,
       .split-band ul,
       .download-band p {
         font-size: 17px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-links {
+        left: -6px;
+        right: -6px;
+      }
+
+      .footer-links {
+        flex-direction: column;
       }
     }
   </style>
@@ -849,7 +943,14 @@
           <span>Nutrishi</span>
         </a>
 
-        <nav class="nav-links" aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+          aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" id="site-nav" aria-label="Main navigation">
           <a href="#screenshots">Screenshots</a>
           <a href="#features">Features</a>
           <a href="#privacy">Privacy</a>
@@ -1135,6 +1236,37 @@
       </div>
     </footer>
   </div>
+  <script>
+    (() => {
+      const nav = document.querySelector(".nav");
+      const toggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (!nav || !toggle || !navLinks) return;
+
+      const closeMenu = () => {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation menu");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 960) closeMenu();
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 960) closeMenu();
+      });
+    })();
+  </script>
 </body>
 
 </html>

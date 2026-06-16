@@ -152,6 +152,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      position: relative;
     }
 
     .brand {
@@ -180,6 +181,33 @@
       font-size: 15px;
       font-weight: 750;
       align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--primary);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(27, 75, 52, 0.08);
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
     .download-link {
@@ -447,16 +475,61 @@
     }
 
     @media (max-width: 760px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.97);
+        box-shadow: 0 24px 48px rgba(27, 75, 52, 0.14);
+      }
+
+      .nav.is-open .nav-links {
+        display: flex;
+      }
+
+      .nav.is-open .nav-toggle span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .nav.is-open .nav-toggle span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav.is-open .nav-toggle span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
       .highlight-grid { grid-template-columns: 1fr; }
 
       .hero,
       .card { padding: 24px; }
 
-      .nav { align-items: flex-start; }
-
       .nav-links {
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        font-size: 14px;
+      }
+
+      .nav-links a {
+        width: 100%;
+      }
+
+      .nav-links a:not(.download-link) {
+        padding: 4px 2px;
+      }
+
+      .download-link {
+        justify-content: center;
       }
     }
 
@@ -474,7 +547,16 @@
 
       .brand { font-size: 22px; }
 
-      .nav-links { font-size: 14px; }
+      .download-link {
+        padding: 8px 12px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-links {
+        left: -6px;
+        right: -6px;
+      }
     }
   </style>
 </head>
@@ -487,7 +569,14 @@
         <span>Nutrishi</span>
       </a>
 
-      <nav class="nav-links" aria-label="Policy navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="policy-nav"
+        aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="policy-nav" aria-label="Policy navigation">
         <a href="/">Home</a>
         <a href="mailto:support@nutrishi.com">Contact</a>
         <a class="download-link store-link" href="https://play.google.com/store/apps/details?id=com.nutrishiapp"
@@ -693,5 +782,36 @@
       © 2026 Nutrishi. This policy may be updated as the app evolves.
     </div>
   </footer>
+  <script>
+    (() => {
+      const nav = document.querySelector(".nav");
+      const toggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (!nav || !toggle || !navLinks) return;
+
+      const closeMenu = () => {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation menu");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 760) closeMenu();
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 760) closeMenu();
+      });
+    })();
+  </script>
 </body>
 </html>
