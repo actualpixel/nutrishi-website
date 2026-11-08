@@ -7,7 +7,7 @@
   <title>Privacy Policy — Nutrishi</title>
   <meta
     name="description"
-    content="Read the Privacy Policy for Nutrishi, a private offline-first nutrition tracker. Learn how Nutrishi stores profile, food, water, weight, reminder, export/import, and app lock data locally on your device."
+    content="How Nutrishi by Actual Pixel LLP handles personal data: profile and logs stored on your phone, optional usage data, barcode lookups, your rights under the DPDP Act, and our Grievance Officer."
   />
   <meta
     name="keywords"
@@ -558,6 +558,108 @@
         right: -6px;
       }
     }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 6px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      min-width: 560px;
+    }
+    .data-table th,
+    .data-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 12px 14px;
+      border-top: 1px solid var(--border, #dfeae3);
+    }
+    .data-table thead th {
+      border-top: 0;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary, #2d6a4f);
+    }
+    .data-table td:first-child {
+      font-weight: 700;
+    }
+    .card a {
+      color: var(--primary, #2d6a4f);
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .data-table {
+        min-width: 0;
+      }
+      .data-table thead {
+        display: none;
+      }
+      .data-table tr {
+        display: block;
+        border-top: 1px solid var(--border, #dfeae3);
+        padding: 12px 0;
+      }
+      .data-table tbody tr:first-child {
+        border-top: 0;
+      }
+      .data-table td {
+        display: block;
+        border: 0;
+        padding: 3px 0;
+      }
+      .data-table td:not(:first-child)::before {
+        content: attr(data-label) ": ";
+        font-weight: 800;
+        color: var(--primary, #2d6a4f);
+      }
+    }
+
+    .toc {
+      margin-bottom: 18px;
+    }
+    .toc ol {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      columns: 2;
+      column-gap: 28px;
+      font-size: 15px;
+    }
+    .toc li {
+      margin: 4px 0;
+      break-inside: avoid;
+    }
+
+    .toc li::before {
+      content: none !important;
+      display: none !important;
+    }
+    .toc ol {
+      list-style: decimal;
+    }
+    .toc li {
+      padding-left: 2px !important;
+    }
+    .card ul + p,
+    .card ul + p strong:first-child {
+      margin-top: 16px;
+    }
+    @media (max-width: 640px) {
+      .toc ol {
+        columns: 1;
+      }
+      .card ul {
+        padding-left: 18px;
+      }
+      .card p,
+      .card li {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
   </style>
 </head>
 
@@ -601,177 +703,415 @@
     <div class="container">
       <section class="hero">
         <div class="hero-content">
-          <div class="pill">Local only</div>
+          <div class="pill">Private by design</div>
           <h1>Privacy Policy</h1>
           <p>
-            Nutrishi is offline-first by design. Your data stays on your device unless you choose to export or share it.
+            This policy explains what personal data the Nutrishi app and nutrishi.com handle, why, where it goes,
+            and the choices you have.
           </p>
           <p>
-            Your profile, food logs, water logs, weight records, goals, reminders, preferences, and local backups are stored locally on your device in the current version.
+            In short: your food logs, weight and profile are stored on your phone, not on our servers. You don’t need
+            an account, we don’t show ads, and we don’t sell your data.
           </p>
         </div>
       </section>
 
-      <div class="section-label">Quick privacy highlights</div>
+      <div class="section-label">At a glance</div>
 
       <section class="highlight-grid" aria-label="Privacy highlights">
         <article class="card quick-card">
           <div class="card-header">
             <div class="icon">⌾</div>
           </div>
-          <h2>Stored locally</h2>
-          <p>Nutrition, water, weight, and profile data stays on your device.</p>
+          <h2>Stored on your phone</h2>
+          <p>Your profile, food logs, water and weight records are kept on your device, not on our servers.</p>
         </article>
 
         <article class="card quick-card">
           <div class="card-header">
             <div class="icon">i</div>
           </div>
-          <h2>No ads</h2>
-          <p>We do not use advertising trackers in the current version.</p>
+          <h2>Usage data only if you allow it</h2>
+          <p>Feature-usage data is off until you turn it on, and you can turn it off at any time.</p>
         </article>
 
         <article class="card quick-card">
           <div class="card-header">
             <div class="icon">≡</div>
           </div>
-          <h2>No selling</h2>
-          <p>We do not sell your health or nutrition data.</p>
+          <h2>Not sold</h2>
+          <p>We do not sell, rent or trade your personal data, and we do not use advertising trackers.</p>
         </article>
       </section>
 
-      <div class="section-label">Detailed policy</div>
+      <nav class="card toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <ol>
+          <li><a href="#who-we-are">Who we are</a></li>
+          <li><a href="#summary">What we handle and where it goes</a></li>
+          <li><a href="#on-device">Data on your phone</a></li>
+          <li><a href="#analytics">Usage data (optional)</a></li>
+          <li><a href="#barcode">Barcode lookups</a></li>
+          <li><a href="#email">When you contact us</a></li>
+          <li><a href="#website">This website</a></li>
+          <li><a href="#sharing">Who we share data with</a></li>
+          <li><a href="#security">Security and incidents</a></li>
+          <li><a href="#rights">Your rights</a></li>
+          <li><a href="#grievance">Grievance Officer</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#permissions">Phone permissions</a></li>
+          <li><a href="#changes">Changes</a></li>
+        </ol>
+      </nav>
 
-      <section class="card">
+      <div class="section-label">Full policy</div>
+
+      <section class="card" id="who-we-are">
+        <div class="card-header">
+          <div class="icon">1</div>
+          <h2>Who we are</h2>
+        </div>
+        <p>
+          Nutrishi is made by <strong>Actual Pixel LLP</strong> (“Actual Pixel”, “we”, “us”), Cyber City’s Cyber
+          Tower Apartment, Chandanagar, Hyderabad 500050, Telangana, India.
+        </p>
+        <p>
+          For the personal data described in this policy, Actual Pixel is the Data Fiduciary under India’s Digital
+          Personal Data Protection Act, 2023 and the rules made under it.
+        </p>
+      </section>
+
+      <section class="card" id="summary">
+        <div class="card-header">
+          <div class="icon">2</div>
+          <h2>What data we handle, why, and where it goes</h2>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Data</th>
+                <th scope="col">Why</th>
+                <th scope="col">Where it goes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Data">Profile: name, age, gender, height, weight, activity level, goal and diet preference</td>
+                <td data-label="Why">Calculate your daily targets and show your progress</td>
+                <td data-label="Where it goes">Your phone, and your phone’s own backups if you use them</td>
+              </tr>
+              <tr>
+                <td data-label="Data">Food, water, weight and meal-plan logs; saved foods; meal templates; scanned products</td>
+                <td data-label="Why">Track your nutrition and show trends</td>
+                <td data-label="Where it goes">Your phone, and your phone’s own backups if you use them</td>
+              </tr>
+              <tr>
+                <td data-label="Data">Reminder, appearance and App Lock settings</td>
+                <td data-label="Why">Run the features you turn on</td>
+                <td data-label="Where it goes">Your phone</td>
+              </tr>
+              <tr>
+                <td data-label="Data">Backup files you export</td>
+                <td data-label="Why">Restore your data or move to a new phone</td>
+                <td data-label="Where it goes">Wherever you choose to save or share them</td>
+              </tr>
+              <tr>
+                <td data-label="Data">Usage events linked to a random app-install ID (optional)</td>
+                <td data-label="Why">Understand which features help people keep tracking, and find problems</td>
+                <td data-label="Where it goes">PostHog, our analytics provider (servers in the USA), only if you allow it</td>
+              </tr>
+              <tr>
+                <td data-label="Data">Barcode number of a product you scan</td>
+                <td data-label="Why">Look up that product’s nutrition details</td>
+                <td data-label="Where it goes">Open Food Facts, a public food-product database</td>
+              </tr>
+              <tr>
+                <td data-label="Data">Technical data from the barcode scanner: device model, OS and app version, performance and error data, and a per-installation identifier</td>
+                <td data-label="Why">Google says it uses this for ML Kit diagnostics and usage analytics (ML Kit is the scanner library built into the app)</td>
+                <td data-label="Where it goes">Google</td>
+              </tr>
+              <tr>
+                <td data-label="Data">Emails you send us</td>
+                <td data-label="Why">Answer your question or handle your request</td>
+                <td data-label="Where it goes">Our email provider</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card" id="on-device">
         <div class="card-header">
           <div class="icon">⌾</div>
-          <h2>Information stored on your device</h2>
+          <h2>Data stored on your phone</h2>
         </div>
-
+        <p>The following is stored on your device. The app does not send it to us or to anyone else:</p>
         <ul>
-          <li>Profile details such as name, gender, age/date of birth, height, and weight</li>
-          <li>Calorie, macro, water, and weight goals</li>
-          <li>Food logs, saved foods, custom foods, and meal templates</li>
-          <li>Meal plans and planned food items</li>
-          <li>Water logs and hydration records</li>
-          <li>Weight records and progress history</li>
-          <li>Reminder, appearance, app lock, and other app preferences</li>
+          <li>Profile details: name, gender, age, height, weight, activity level, goal and diet preference</li>
+          <li>Calorie, macro, water and weight targets</li>
+          <li>Food logs, saved foods, custom foods, meal templates and products you have scanned</li>
+          <li>Meal plans, water logs and weight history</li>
+          <li>Reminder, appearance, App Lock and other app settings</li>
         </ul>
+        <p>
+          The app uses this data on your device to estimate your targets, track your day, show progress and schedule
+          reminders you turn on.
+        </p>
+        <p>
+          This data is not encrypted by Nutrishi itself. App Lock protects access to the app, not the stored files.
+          On iPhone, app data can be included in your own iCloud or computer backups if you use them, and exported
+          backup files and automatic pre-import safety copies are visible in the Files app.
+        </p>
+        <p>
+          If you uninstall the app, clear its data or use <strong>Reset local data</strong>, this information is
+          deleted from your phone. Export a backup first if you want to keep it.
+        </p>
       </section>
 
-      <section class="card">
-        <div class="card-header">
-          <div class="icon">⌁</div>
-          <h2>How the app uses this information</h2>
-        </div>
-
-        <ul>
-          <li>Estimate calorie needs and daily nutrition targets</li>
-          <li>Calculate macro targets and progress summaries</li>
-          <li>Track daily nutrition, hydration, meal plans, and weight history</li>
-          <li>Show local insights based on your own app data</li>
-          <li>Schedule local reminders if enabled</li>
-          <li>Protect access with App Lock if enabled</li>
-        </ul>
-      </section>
-
-      <section class="card">
+      <section class="card" id="analytics">
         <div class="card-header">
           <div class="icon">i</div>
-          <h2>Data collection and sharing</h2>
+          <h2>Usage data (optional)</h2>
         </div>
-
         <p>
-          In the current version, Nutrishi does not require an account and does not send your profile, food logs, water logs, meal plans, weight records, or goals to our servers.
+          With your permission, the app sends us events about how features are used, such as “a meal was logged” or
+          “a barcode scan found a product”. This helps us see which features help people keep tracking and where they
+          get stuck.
         </p>
         <p>
-          We do not sell, rent, or share your personal health or nutrition data with advertisers or third parties.
+          <strong>It is off until you allow it.</strong> The app asks you once. You can change your choice at any
+          time in <strong>Profile → Data &amp; Privacy → Share usage data</strong>.
+        </p>
+        <p><strong>What is sent</strong></p>
+        <ul>
+          <li>The name of the action, for example “food logged”, “water logged” or “meal template created”</li>
+          <li>Limited details about how it was done, for example where in the app it started, the meal slot, whether a template was used, the food category chosen (such as “Breakfast”), a water amount range (such as “250–499 ml”), or whether a search or barcode lookup found a result</li>
+          <li>Your platform (Android or iOS) on some events</li>
+          <li>The time of the event and a random identifier created for your app install. The identifier lets us count events from the same install over time. It is not your name, phone number or advertising ID, and we do not link it to you.</li>
+        </ul>
+        <p><strong>What is never sent</strong></p>
+        <ul>
+          <li>Food or meal names, calories, macros, weight or other body measurements</li>
+          <li>Your name, age, gender or diet preference</li>
+          <li>Search text, barcode numbers or anything you type</li>
+          <li>Your contacts, GPS location or advertising ID</li>
+        </ul>
+        <p>
+          Like any internet connection, your device’s IP address reaches PostHog when data is sent. The app
+          instructs PostHog not to use it to estimate your location, and not to create a user profile from these
+          events.
+        </p>
+        <p>
+          <strong>Turning it off</strong> stops collection straight away and deletes any usage events still waiting
+          on your phone. An event that is already being sent at that moment may still arrive. If you turn it on again
+          later, a new random install ID is used.
+        </p>
+        <p>
+          <strong>Retention and deletion.</strong> Usage events are kept for up to 12 months under our PostHog plan.
+          After that, PostHog deletes them in its regular clean-up, which can take some extra time. Because these events are linked only to a random install ID and no user profile is
+          created, PostHog’s tools do not currently let us find and delete one installation’s events on request, so
+          they are removed when the retention period ends. You can contact our Grievance Officer with any question
+          or request about this data.
         </p>
       </section>
 
-      <section class="card">
+      <section class="card" id="barcode">
+        <div class="card-header">
+          <div class="icon">▦</div>
+          <h2>Barcode lookups</h2>
+        </div>
+        <p>
+          When you scan a packaged product that isn’t already saved on your phone, the app sends the barcode number
+          to <a href="https://world.openfoodfacts.org/" target="_blank" rel="noopener">Open Food Facts</a>, a free
+          public database, to fetch the product’s name, nutrition details and product image. Like any internet
+          request, this includes your IP address. No other app data is sent.
+        </p>
+        <p>
+          The camera is used to read the barcode on your phone; the app does not upload camera images. Product
+          details are saved on your phone so the same product works offline next time. Open Food Facts handles
+          requests under its own privacy policy.
+        </p>
+        <p>
+          The barcode scanner uses Google’s ML Kit, which reads barcodes on your phone. According to Google’s
+          documentation, ML Kit may send Google technical information: your device model, operating system and
+          app version, scanner settings, performance and error data, and an identifier for this installation.
+          Google’s list of this data does not include camera images or barcode values, and the app gives ML Kit no
+          other Nutrishi data. Google’s library decides when this is sent; it cannot be switched off in the app and
+          is separate from the optional usage data above. We cannot access or delete this data; Google handles it
+          under its own terms.
+        </p>
+      </section>
+
+      <section class="card" id="email">
+        <div class="card-header">
+          <div class="icon">✉</div>
+          <h2>When you contact us</h2>
+        </div>
+        <p>
+          If you email us, we use your email address and what you write only to reply and handle your request. We
+          keep support emails for up to 12 months after your request is closed, unless the law requires us to keep
+          them longer.
+        </p>
+      </section>
+
+      <section class="card" id="website">
+        <div class="card-header">
+          <div class="icon">⌂</div>
+          <h2>This website</h2>
+        </div>
+        <p>
+          nutrishi.com does not use analytics, advertising cookies or tracking scripts. The site is hosted on GitHub
+          Pages, which logs and stores visitors’ IP addresses for security purposes.
+        </p>
+      </section>
+
+      <section class="card" id="sharing">
         <div class="card-header">
           <div class="icon">⇄</div>
-          <h2>Export and import backups</h2>
+          <h2>Who we share data with</h2>
         </div>
-
+        <p>We do not sell, rent or trade personal data. Data reaches these parties only as described here:</p>
+        <ul>
+          <li><strong>PostHog</strong> (analytics service provider): usage events, only if you allow them</li>
+          <li><strong>Open Food Facts</strong> (public product database): the barcode number of a product you look up</li>
+          <li><strong>Google</strong> (ML Kit): technical scanner data, as described under Barcode lookups</li>
+          <li><strong>Our email provider and GitHub</strong> (service providers): to run support and host nutrishi.com</li>
+          <li><strong>Government or law enforcement authorities</strong>: only when Indian law requires it</li>
+        </ul>
         <p>
-          Nutrishi may allow you to export and import local backup files. These files can contain personal nutrition and health-related information.
-        </p>
-        <p>
-          Keep backup files private and store them securely. Nutrishi does not upload backup files unless you choose to share them using your device’s share options.
+          PostHog stores data in the USA. Indian law allows this unless the Government restricts transfers to a
+          country; we will follow any such restriction.
         </p>
       </section>
 
-      <section class="card">
-        <div class="card-header">
-          <div class="icon">◷</div>
-          <h2>Notifications and reminders</h2>
-        </div>
-
-        <p>
-          Reminders are local check-ins. Notification permission may be requested so meal, water, weight, and weekly progress reminders can appear on your device. You can disable reminders from app settings or from your device settings at any time.
-        </p>
-      </section>
-
-      <section class="card">
-        <div class="card-header">
-          <div class="icon">≡</div>
-          <h2>Data control and deletion</h2>
-        </div>
-
-        <p>
-          You can edit profile details and logged entries inside the app where supported. You can also reset local data from Profile → Data & Privacy to remove locally stored Nutrishi information from this device.
-        </p>
-        <p>
-          If you uninstall the app, clear app data, change devices without importing a backup, or reset local data, your local Nutrishi data may be deleted from the device.
-        </p>
-      </section>
-
-      <section class="card">
+      <section class="card" id="security">
         <div class="card-header">
           <div class="icon">⚙</div>
-          <h2>App Lock</h2>
+          <h2>Security and incidents</h2>
         </div>
-
+        <ul>
+          <li>Your health and body data stays on your device rather than on our servers.</li>
+          <li>App Lock can protect access to the app with your phone’s face, fingerprint or passcode. Nutrishi does not store your biometric data; your phone’s operating system handles it.</li>
+          <li>The app connects to PostHog and Open Food Facts over encrypted HTTPS connections.</li>
+          <li>Usage events are limited to an approved list and checked in the app before they are sent. Access to them is limited to the Nutrishi team.</li>
+        </ul>
         <p>
-          App Lock uses your device authentication to help protect access to Nutrishi. Nutrishi does not store your Face ID, fingerprint, or biometric data. Biometric authentication is handled by your device operating system.
+          Exported backup files contain your personal nutrition and health information in readable form. Keep them
+          private and store them securely.
+        </p>
+        <p>
+          If a personal data breach affects data we handle, we will notify affected users and the Data Protection
+          Board of India as required by law.
         </p>
       </section>
 
-      <section class="card warning">
+      <section class="card" id="rights">
+        <div class="card-header">
+          <div class="icon">✓</div>
+          <h2>Your rights and how to use them</h2>
+        </div>
+        <p>Under the DPDP Act, you have the right to:</p>
+        <ul>
+          <li>Get a summary of the personal data we process about you, and who we share it with</li>
+          <li>Correct, complete or update your data</li>
+          <li>Have your data erased</li>
+          <li>Withdraw your consent at any time</li>
+          <li>Have your complaints addressed</li>
+          <li>Nominate someone to use these rights for you if you die or are unable to</li>
+        </ul>
+        <p><strong>How to use them</strong></p>
+        <ul>
+          <li><strong>Data on your phone:</strong> view and edit it in the app, export it from Profile → Data &amp; Privacy → Export my data, or erase it with Reset local data. We cannot access this data, so you control it directly.</li>
+          <li><strong>Usage data:</strong> turn off Share usage data in Profile → Data &amp; Privacy. This stops collection and deletes events not yet sent from your phone. Events already received by PostHog cannot be deleted individually; see “Retention and deletion” above.</li>
+          <li><strong>Emails you sent us:</strong> ask our Grievance Officer to delete them, and we will, unless the law requires us to keep them.</li>
+          <li><strong>Anything else, including nomination:</strong> email our Grievance Officer at <a href="mailto:support@actualpixel.in">support@actualpixel.in</a>.</li>
+        </ul>
+        <p>We will respond as soon as possible, and in any case within 90 days.</p>
+      </section>
+
+      <section class="card" id="grievance">
+        <div class="card-header">
+          <div class="icon">☏</div>
+          <h2>Grievance Officer</h2>
+        </div>
+        <p>
+          <strong>Rahul Kumar</strong>, Grievance Officer, Actual Pixel LLP<br />
+          Cyber City’s Cyber Tower Apartment, Chandanagar, Hyderabad 500050, Telangana, India<br />
+          Email: <a href="mailto:support@actualpixel.in">support@actualpixel.in</a>
+        </p>
+        <p>
+          Contact him with any question or complaint about your personal data. If you are not satisfied with our
+          response, you can complain to the Data Protection Board of India.
+        </p>
+      </section>
+
+      <section class="card" id="children">
+        <div class="card-header">
+          <div class="icon">!</div>
+          <h2>Children</h2>
+        </div>
+        <p>
+          Nutrishi is not intended for children under 13, and the app does not accept a profile age below 13. If the
+          age in your profile is under 18, usage-data sharing stays off and cannot be turned on.
+        </p>
+        <p>
+          If you are a parent or guardian and have a concern about your child’s data, contact our Grievance Officer.
+        </p>
+      </section>
+
+      <section class="card" id="permissions">
+        <div class="card-header">
+          <div class="icon">◷</div>
+          <h2>Phone permissions</h2>
+        </div>
+        <ul>
+          <li><strong>Camera:</strong> only to scan barcodes, when you open the scanner.</li>
+          <li><strong>Notifications:</strong> only for reminders you turn on. Reminders are scheduled on your phone.</li>
+          <li><strong>Face ID, fingerprint or passcode:</strong> only if you turn on App Lock.</li>
+        </ul>
+        <p>You can withdraw any of these in your phone’s settings at any time.</p>
+      </section>
+
+      <section class="card" id="health">
         <div class="card-header">
           <div class="icon">i</div>
           <h2>Health disclaimer</h2>
         </div>
-
         <p>
-          Nutrishi is for general wellness and nutrition tracking only. It does not provide medical advice, diagnosis, or treatment. Calorie, macro, water, and BMI values are estimates. Consult a qualified healthcare professional before making major diet, fitness, pregnancy, medical, or weight-loss decisions.
+          Nutrishi is for general wellness and nutrition tracking only. It does not provide medical advice, diagnosis,
+          or treatment. Calorie, macro, water, and BMI values are estimates. Consult a qualified healthcare
+          professional before making major diet, fitness, pregnancy, medical, or weight-loss decisions.
         </p>
       </section>
 
-      <section class="card">
-        <h2>Children</h2>
+      <section class="card" id="changes">
+        <div class="card-header">
+          <div class="icon">↻</div>
+          <h2>Changes to this policy</h2>
+        </div>
         <p>
-          Nutrishi is intended for adults and is not designed for children without parent or guardian supervision.
+          When we change this policy we will update the date below. If a change affects what data we collect or why,
+          we will tell you in the app before it takes effect and ask for your consent where the law requires it.
         </p>
-
-        <h3>Changes to this policy</h3>
-        <p>
-          This policy may be updated as Nutrishi evolves. If future versions add account login, cloud sync, analytics, crash reporting, ads, subscriptions, or server-side features, this policy and relevant store declarations should be updated before release.
-        </p>
+        <ul>
+          <li><strong>[Publication date]:</strong> Rewritten for the DPDP Act. Added optional usage data, barcode lookups, your rights, and our Grievance Officer.</li>
+          <li><strong>May 2026:</strong> First version.</li>
+        </ul>
       </section>
 
       <section class="card meta-card">
-
         <div class="meta-row">
           <strong>Last updated</strong>
-          <span>May 2026</span>
+          <span>[Publication date]</span>
         </div>
-
         <div class="meta-row">
-          <strong>Contact</strong>
+          <strong>App support</strong>
           <span><a href="mailto:support@nutrishi.com">support@nutrishi.com</a></span>
+        </div>
+        <div class="meta-row">
+          <strong>Privacy and grievances</strong>
+          <span><a href="mailto:support@actualpixel.in">support@actualpixel.in</a></span>
         </div>
       </section>
     </div>
@@ -779,7 +1119,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Nutrishi. This policy may be updated as the app evolves.
+      © 2026 Actual Pixel LLP. Nutrishi is a product of Actual Pixel LLP, Hyderabad.
     </div>
   </footer>
   <script>

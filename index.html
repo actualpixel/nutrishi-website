@@ -5,12 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Nutrishi — Offline Calorie, Macro, Water & Weight Tracker</title>
+  <title>Nutrishi — Calorie & Protein Tracker for Indian Food</title>
   <meta name="description"
-    content="Nutrishi is a private offline calorie tracker with free food estimates for everyday foods, meal planning, water tracking, weight tracking, and macros. No account required." />
-  <meta name="keywords"
-    content="Nutrishi, calorie tracker, macro tracker, nutrition tracker, food diary, meal planner, water tracker, weight tracker, offline calorie tracker, private nutrition app" />
-  <meta name="author" content="Nutrishi" />
+    content="Track calories and protein in roti, dal, rice and everyday Indian meals using real portions like katoris, bowls and pieces. Free barcode scan. No login, and your data stays on your phone." />
+  <meta name="author" content="Actual Pixel LLP" />
+  <meta name="apple-itunes-app" content="app-id=6779558409" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://nutrishi.com/" />
 
@@ -21,9 +20,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nutrishi.com/" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Nutrishi — Private Offline Nutrition Tracker" />
+  <meta property="og:title" content="Nutrishi — Calorie Tracking for Indian Food" />
   <meta property="og:description"
-    content="Track calories offline with free estimates, macros, water, weight, and meal plans privately. Offline-first. No account required." />
+    content="Log roti, dal, rice and thalis in real Indian portions. Track calories and protein privately. Free barcode scan, no login." />
   <meta property="og:image" content="https://nutrishi.com/assets/feature-graphic.png" />
   <meta property="og:image:secure_url" content="https://nutrishi.com/assets/feature-graphic.png" />
   <meta property="og:image:type" content="image/png" />
@@ -34,9 +33,9 @@
   <meta property="og:site_name" content="Nutrishi" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nutrishi — Private Offline Nutrition Tracker" />
+  <meta name="twitter:title" content="Nutrishi — Calorie Tracking for Indian Food" />
   <meta name="twitter:description"
-    content="Track calories offline with free estimates, macros, water, weight, and meal plans privately. Offline-first. No account required." />
+    content="Log roti, dal, rice and thalis in real Indian portions. Track calories and protein privately. Free barcode scan, no login." />
   <meta name="twitter:image" content="https://nutrishi.com/assets/feature-graphic.png" />
   <meta name="twitter:image:alt"
     content="Nutrishi branding with a nutrition dashboard and the text Private offline nutrition tracking." />
@@ -48,7 +47,12 @@
     "name": "Nutrishi",
     "operatingSystem": "Android, iOS",
     "applicationCategory": "HealthApplication",
-    "description": "Nutrishi is a private, offline-first nutrition tracker for calories, macros, water, weight, and meal planning. No account required.",
+    "description": "Nutrishi is a private, offline-first calorie and protein tracker built for Indian food, with real portion sizes, barcode scanning, and water and weight tracking. No account required.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Actual Pixel LLP",
+      "url": "https://actualpixel.in/"
+    },
     "url": "https://nutrishi.com/",
     "image": "https://nutrishi.com/assets/favicon.png",
     "offers": {
@@ -931,6 +935,387 @@
         flex-direction: column;
       }
     }
+
+    /* ---- v2: real app screens, how it works, why, faq ---- */
+    .hero-phones {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 590px;
+      padding: 40px 24px;
+      animation: softRise 0.85s ease-out 0.2s both;
+    }
+    .phone {
+      position: relative;
+      z-index: 1;
+      height: auto;
+      border: 8px solid #12261c;
+      border-radius: 38px;
+      background: #eff6f2;
+      box-shadow: 0 30px 60px rgba(8, 30, 20, 0.35);
+    }
+    .phone-back {
+      width: min(52%, 270px);
+      transform: rotate(-6deg) translateY(30px);
+      opacity: 0.94;
+    }
+    .phone-front {
+      width: min(62%, 320px);
+      margin-left: -16%;
+      animation: softFloat 8s ease-in-out 1.4s infinite;
+    }
+    .section-head .eyebrow {
+      margin-bottom: 16px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .step {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 28px 28px 0;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 850;
+      margin-bottom: 18px;
+    }
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+    }
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .step-shot {
+      margin-top: auto;
+      padding-top: 26px;
+      height: 340px;
+      overflow: hidden;
+    }
+    .step-shot img {
+      width: min(82%, 260px);
+      margin: 0 auto;
+      border: 7px solid #12261c;
+      border-bottom: 0;
+      border-radius: 32px 32px 0 0;
+      background: #eff6f2;
+    }
+    .screenshot-card img,
+    .step-shot img {
+      height: auto;
+      aspect-ratio: 150 / 277;
+    }
+    .compare {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .compare-row {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr 1.1fr;
+      gap: 18px;
+      align-items: center;
+      padding: 20px 30px;
+      border-top: 1px solid var(--border);
+      font-size: 17px;
+    }
+    .compare-row:first-child {
+      border-top: 0;
+    }
+    .compare-head {
+      background: var(--surface-soft);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .compare-head .col-us {
+      color: var(--primary);
+    }
+    .compare-row [role="rowheader"] {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .compare-row .col-us {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--primary-deep);
+      font-weight: 700;
+    }
+    .compare-row .col-us .tick {
+      flex: 0 0 auto;
+      margin-top: 4px;
+      color: var(--primary);
+    }
+    .compare-row .col-them {
+      color: var(--muted);
+    }
+    .faq-wrap {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .faq-wrap .section-copy a {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+    .faq-list details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 0 24px;
+      box-shadow: 0 8px 24px rgba(27, 75, 52, 0.05);
+    }
+    .faq-list summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 32px 20px 0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      position: relative;
+    }
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-list summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--primary);
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .faq-list details[open] summary::after {
+      content: "\2212";
+    }
+    .faq-list details p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .download-qr-codes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      width: min(100%, 308px);
+      justify-self: center;
+    }
+    .qr-box {
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.85);
+    }
+    .qr-box img {
+      width: 144px;
+      height: auto;
+      aspect-ratio: 1;
+      border-radius: 14px;
+      background: #fff;
+    }
+    .download-band-content {
+      grid-template-columns: 1fr auto;
+    }
+    .qr-box:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 5px;
+      border-radius: 14px;
+    }
+    @media (max-width: 960px) {
+      .steps {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+      }
+      .faq-wrap {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .download-band-content {
+        grid-template-columns: 1fr;
+      }
+      .hero-phones {
+        min-height: 520px;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero-phones {
+        min-height: 0;
+        max-height: 470px;
+        align-items: flex-start;
+        padding: 26px 16px 0;
+      }
+      .phone-back {
+        display: none;
+      }
+      .phone-front {
+        width: min(80%, 300px);
+        margin: 0 auto;
+        animation: none;
+      }
+      .step {
+        padding: 22px 22px 0;
+      }
+      .step-shot {
+        height: 300px;
+      }
+      .compare-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 14px;
+        padding: 16px 18px;
+        font-size: 15px;
+      }
+      .compare-row [role="rowheader"] {
+        grid-column: 1 / -1;
+      }
+      .compare-head span:first-child {
+        display: none;
+      }
+      .faq-list details {
+        padding: 0 18px;
+      }
+      .faq-list summary {
+        font-size: 16px;
+      }
+    }
+
+    /* ---- v3: hero refinements ---- */
+    .hero {
+      padding: 40px 0 64px;
+    }
+    .hero h1 {
+      font-size: clamp(42px, 5.6vw, 68px);
+      line-height: 1.0;
+      max-width: 620px;
+    }
+    .hero-copy {
+      max-width: 540px;
+      margin-top: 22px;
+    }
+    .hero-actions {
+      margin-top: 30px;
+    }
+    .hero-proof {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .hero-phones {
+      min-height: 560px;
+    }
+    .log-chip {
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px 12px 12px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(8, 30, 20, 0.28);
+      color: var(--text);
+      line-height: 1.25;
+    }
+    .log-chip strong {
+      display: block;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+    }
+    .log-chip small {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+    .log-chip-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+    }
+    .log-chip-a {
+      left: 5%;
+      top: 9%;
+      animation: softRise 0.8s ease-out 0.7s both, softFloat 7s ease-in-out 1.6s infinite;
+    }
+    .log-chip-b {
+      right: 4%;
+      bottom: 10%;
+      animation: softRise 0.8s ease-out 0.95s both, softFloat 7.5s ease-in-out 2.2s infinite;
+    }
+    @media (max-width: 960px) {
+      .hero h1 {
+        max-width: none;
+      }
+    }
+    @media (max-width: 640px) {
+      .log-chip {
+        padding: 9px 12px 9px 9px;
+        gap: 9px;
+        border-radius: 14px;
+      }
+      .log-chip strong {
+        font-size: 13px;
+      }
+      .log-chip small {
+        font-size: 12px;
+      }
+      .log-chip-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 9px;
+      }
+      .log-chip-a {
+        left: 10px;
+        top: 70px;
+      }
+      .log-chip-b {
+        right: 10px;
+        top: 230px;
+        bottom: auto;
+      }
+      .hero {
+        padding-bottom: 20px;
+      }
+      .hero-phones {
+        min-height: 0;
+        max-height: 500px;
+      }
+    }
   </style>
 </head>
 
@@ -951,9 +1336,10 @@
         </button>
 
         <nav class="nav-links" id="site-nav" aria-label="Main navigation">
-          <a href="#screenshots">Screenshots</a>
-          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#why">Why Nutrishi</a>
           <a href="#privacy">Privacy</a>
+          <a href="#faq">FAQ</a>
           <a class="nav-download store-link" href="https://play.google.com/store/apps/details?id=com.nutrishiapp"
             target="_blank" rel="noopener">
             <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -976,12 +1362,11 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <div class="eyebrow">Free calorie estimates • Offline-first</div>
-            <h1>Track calories offline with free food estimates.</h1>
+            <div class="eyebrow">Made for Indian food • Private • Offline</div>
+            <h1>Calorie tracking that understands Indian food.</h1>
             <p class="hero-copy">
-              Nutrishi helps you estimate calories for everyday foods like rice, roti, dal,
-              chicken, fruits, snacks, and more — then track meals, macros, water, weight,
-              and progress without an account.
+              Log roti, dal, rice and full thalis in katoris and pieces, not just grams.
+              See your calories and protein for the day, privately.
             </p>
 
             <div class="hero-actions store-actions">
@@ -1001,74 +1386,94 @@
               </a>
             </div>
 
-            <div class="hero-proof" aria-label="Nutrishi privacy highlights">
-              <span>✓ Free food estimates</span>
-              <span>✓ Offline-first</span>
-              <span>✓ No account required</span>
+            <div class="hero-proof" aria-label="Nutrishi highlights">
+              <span>✓ Free on Android &amp; iPhone</span>
+              <span>✓ No login</span>
+              <span>✓ Works offline</span>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="Nutrishi app preview">
-            <div class="app-preview">
-              <div class="preview-topline">
-                <div class="preview-label">Today</div>
-                <div class="preview-pill">Private by design</div>
-              </div>
-
-              <div class="preview-number">1,930</div>
-              <div class="preview-sub">kcal daily target</div>
-              <div class="preview-progress"><span></span></div>
-
-              <div class="mini-grid">
-                <div class="mini-card">
-                  <span>Protein</span>
-                  <strong>154g</strong>
-                </div>
-                <div class="mini-card">
-                  <span>Carbs</span>
-                  <strong>183g</strong>
-                </div>
-                <div class="mini-card">
-                  <span>Water</span>
-                  <strong>3.1L</strong>
-                </div>
-                <div class="mini-card">
-                  <span>Weight</span>
-                  <strong>70kg</strong>
-                </div>
-              </div>
+          <div class="hero-visual hero-phones" aria-label="Nutrishi app screens">
+            <img class="phone phone-back" src="/assets/app/add-food.webp" width="600" height="1108"
+              alt="Nutrishi Add Food screen with food database search, barcode scan, saved foods and meal templates" />
+            <img class="phone phone-front" src="/assets/app/home.webp" width="600" height="1108" fetchpriority="high"
+              alt="Nutrishi home screen showing 1,088 of 1,430 kcal eaten, with protein, carbs, fat and fiber progress" />
+            <div class="log-chip log-chip-a" aria-hidden="true">
+              <span class="log-chip-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M9 3v4M12 2v5M15 3v4"/></svg></span>
+              <span><strong>Dal · 1 medium bowl</strong><small>≈ 207 kcal · 12 g protein</small></span>
             </div>
+            <div class="log-chip log-chip-b" aria-hidden="true">
+              <span class="log-chip-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/></svg></span>
+              <span><strong>Roti · 2 medium</strong><small>≈ 238 kcal · 8 g protein</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">How it works</div>
+            <h2 class="section-title">Three steps to a tracked day.</h2>
+            <p class="section-copy">Set it up once. After that, logging a meal takes a few taps.</p>
+          </div>
+
+          <div class="steps">
+            <article class="step">
+              <div class="step-num">1</div>
+              <h3>Set your goal</h3>
+              <p>Choose to lose, maintain or gain weight. Nutrishi sets your daily calorie, protein, carb and fat targets.</p>
+              <div class="step-shot">
+                <img src="/assets/app/goal.webp" width="600" height="1108" loading="lazy" alt="Nutrishi Goal and targets screen showing a 1,430 kcal daily target with protein, carbs, fat and fiber" />
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-num">2</div>
+              <h3>Log what you eat</h3>
+              <p>Search the Indian food database, scan a barcode, or tap a recent food. Choose the portion and you’re done.</p>
+              <div class="step-shot">
+                <img src="/assets/app/add-food.webp" width="600" height="1108" loading="lazy" alt="Nutrishi Add Food screen with recent foods like chicken curry and jeera rice" />
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-num">3</div>
+              <h3>Reuse your usual meals</h3>
+              <p>Save the thali you eat every week as a template, then log the whole meal in one tap next time.</p>
+              <div class="step-shot">
+                <img src="/assets/app/templates.webp" width="600" height="1108" loading="lazy" alt="Nutrishi meal template called Protein Thali with 633 kcal and a Log now button" />
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section id="screenshots">
         <div class="container">
-          <h2 class="section-title">Estimate, log, and track without complexity.</h2>
+          <h2 class="section-title">Built around how India eats.</h2>
           <p class="section-copy">
-            Don’t know the calories? Use free estimates for common foods, log your meals,
-            plan your day, and review progress in one clean offline-first app.
+            Pick a food, choose a katori, bowl or piece, and log it. Nutrishi does the maths
+            and keeps a clear daily view of calories, protein, water and weight.
           </p>
 
           <div class="screenshots-grid">
             <article class="screenshot-card">
-              <img src="/assets/screenshots/home.png" alt="Nutrishi dashboard screenshot" />
-              <strong>Daily dashboard</strong>
+              <img src="/assets/app/plan.webp" width="600" height="1108" loading="lazy" alt="Nutrishi Plan screen for planning breakfast, lunch and dinner against the daily target" />
+              <strong>Plan your day</strong>
             </article>
 
             <article class="screenshot-card">
-              <img src="/assets/screenshots/plan.png" alt="Nutrishi meal plan screenshot" />
-              <strong>Meal planning</strong>
+              <img src="/assets/app/manual-entry.webp" width="600" height="1108" loading="lazy" alt="Nutrishi Quick log screen for adding a food with meal type and calories" />
+              <strong>Quick manual log</strong>
             </article>
 
             <article class="screenshot-card">
-              <img src="/assets/screenshots/progress.png" alt="Nutrishi progress screenshot" />
-              <strong>Progress insights</strong>
+              <img src="/assets/app/add-weight.webp" width="600" height="1108" loading="lazy" alt="Nutrishi Add weight screen with a weight slider and BMI indicator" />
+              <strong>Weight and BMI</strong>
             </article>
 
             <article class="screenshot-card">
-              <img src="/assets/screenshots/hydration.png" alt="Nutrishi hydration screenshot" />
-              <strong>Water tracking</strong>
+              <img src="/assets/app/water-calendar.webp" width="600" height="1108" loading="lazy" alt="Nutrishi water calendar showing daily intake against the goal" />
+              <strong>Water history</strong>
             </article>
           </div>
         </div>
@@ -1076,48 +1481,92 @@
 
       <section id="features">
         <div class="container">
-          <h2 class="section-title">Built for daily consistency, not complexity.</h2>
+          <h2 class="section-title">Everything you need to track daily. Nothing you don’t.</h2>
           <p class="section-copy">
-            Nutrishi focuses on the essential tools people actually need for nutrition tracking.
+            The essentials for consistent tracking, designed around Indian meals.
           </p>
 
           <div class="cards">
             <article class="card">
-              <div class="icon">≈</div>
-              <h3>Free calorie estimates</h3>
-              <p>Estimate calories for common foods like rice, roti, dal, chicken, fruits, snacks, and more.</p>
+              <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div>
+              <h3>Indian food database</h3>
+              <p>Roti, dal, rice, curries, breakfasts, snacks and sweets — searchable by the names you use, like chawal or bhaat.</p>
             </article>
 
             <article class="card">
-              <div class="icon">🍽</div>
-              <h3>Calories & macros</h3>
-              <p>Track calories, protein, carbs, fat, and fiber in a simple daily view.</p>
+              <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M9 3v4M12 2v5M15 3v4"/></svg></div>
+              <h3>Real portions</h3>
+              <p>Choose a small, medium or large bowl, a katori, a piece or a spoon instead of weighing everything.</p>
             </article>
 
             <article class="card">
-              <div class="icon">📋</div>
-              <h3>Meal planning</h3>
-              <p>Plan breakfast, lunch, dinner, and snacks before the day starts.</p>
+              <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6v12M7 6v12M10 6v12M14 6v12M17 6v12M20 6v12"/></svg></div>
+              <h3>Free barcode scan</h3>
+              <p>Scan packaged foods, check the values against the label, and save them for quick offline reuse. No paywall.</p>
             </article>
 
             <article class="card">
-              <div class="icon">💧</div>
-              <h3>Water tracking</h3>
-              <p>Log drinks and stay consistent with hydration goals.</p>
+              <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-3-1-5 1-8Z"/></svg></div>
+              <h3>Calories & protein</h3>
+              <p>See calories, protein, carbs, fat and fiber against your daily target in one simple view.</p>
             </article>
 
             <article class="card">
-              <div class="icon">⚖</div>
-              <h3>Weight history</h3>
-              <p>Record weight check-ins and understand your trend over time.</p>
+              <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg></div>
+              <h3>Water & weight</h3>
+              <p>Log water through the day and record weight check-ins to see your trend over time.</p>
             </article>
 
             <article class="card">
-              <div class="icon">⇄</div>
-              <h3>Export & import</h3>
-              <p>Create local backups and restore your Nutrishi data when needed.</p>
+              <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15Z"/><path d="M5 19l8-8"/></svg></div>
+              <h3>Your diet, respected</h3>
+              <p>Vegetarian, vegan, Jain, eggetarian and non-vegetarian preferences built in.</p>
             </article>
 
+          </div>
+        </div>
+      </section>
+
+      <section id="why">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Why Nutrishi</div>
+            <h2 class="section-title">Made for Indian kitchens, not Western menus.</h2>
+            <p class="section-copy">Most calorie apps were built around Western food and cloud accounts. Nutrishi is built
+              around how India eats, and keeps your data with you.</p>
+          </div>
+
+          <div class="compare" role="table" aria-label="Nutrishi compared with typical calorie apps">
+            <div class="compare-row compare-head" role="row">
+              <span role="columnheader"></span>
+              <span role="columnheader" class="col-us">Nutrishi</span>
+              <span role="columnheader">Typical calorie apps</span>
+            </div>
+            <div class="compare-row" role="row">
+              <span role="rowheader">Indian food and portions</span>
+              <span role="cell" class="col-us"><svg class="tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Roti, dal, rice and curries in katoris, bowls and pieces</span></span>
+              <span role="cell" class="col-them">Mostly Western foods, measured in grams</span>
+            </div>
+            <div class="compare-row" role="row">
+              <span role="rowheader">Barcode scanning</span>
+              <span role="cell" class="col-us"><svg class="tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Free</span></span>
+              <span role="cell" class="col-them">Often behind a paywall</span>
+            </div>
+            <div class="compare-row" role="row">
+              <span role="rowheader">Getting started</span>
+              <span role="cell" class="col-us"><svg class="tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>No account or login</span></span>
+              <span role="cell" class="col-them">Sign-up required</span>
+            </div>
+            <div class="compare-row" role="row">
+              <span role="rowheader">Your data</span>
+              <span role="cell" class="col-us"><svg class="tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Stays on your phone</span></span>
+              <span role="cell" class="col-them">Stored on company servers</span>
+            </div>
+            <div class="compare-row" role="row">
+              <span role="rowheader">Works offline</span>
+              <span role="cell" class="col-us"><svg class="tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Yes, for logging and history</span></span>
+              <span role="cell" class="col-them">Usually needs internet</span>
+            </div>
           </div>
         </div>
       </section>
@@ -1136,34 +1585,50 @@
 
             <div>
               <ul>
-                <li>No account required</li>
+                <li>No account or login</li>
                 <li>No advertising trackers</li>
                 <li>No selling of health data</li>
                 <li>Local export and import backups</li>
-                <li>Device authentication support through App Lock</li>
+                <li>App Lock with your phone’s fingerprint or face unlock</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="who">
-        <div class="container">
-          <div class="split-band">
-            <div>
-              <div class="eyebrow">Who it is for</div>
-              <h2 class="section-title">For people who want nutrition tracking without noise.</h2>
-            </div>
+      <section id="faq">
+        <div class="container faq-wrap">
+          <div class="section-head">
+            <div class="eyebrow">FAQ</div>
+            <h2 class="section-title">Questions, answered.</h2>
+            <p class="section-copy">Something else? Write to <a href="mailto:support@nutrishi.com">support@nutrishi.com</a>.</p>
+          </div>
 
-            <div>
-              <ul>
-                <li>Understand daily calories and macros</li>
-                <li>Plan meals before eating</li>
-                <li>Track hydration and weight progress</li>
-                <li>Avoid account-based tracking apps</li>
-                <li>Keep wellness data local and controlled</li>
-              </ul>
-            </div>
+          <div class="faq-list">
+            <details>
+              <summary>Is Nutrishi free?</summary>
+              <p>Yes. Food logging, the Indian food database, barcode scanning, and water and weight tracking are all free to use.</p>
+            </details>
+            <details>
+              <summary>Do I need an account?</summary>
+              <p>No. Open the app and start logging. There’s no sign-up, email or password.</p>
+            </details>
+            <details>
+              <summary>Where is my data stored?</summary>
+              <p>On your phone. Your food logs, weight and profile stay on your device unless you export a backup or share it yourself.</p>
+            </details>
+            <details>
+              <summary>How accurate are the calories?</summary>
+              <p>They’re estimates. Home-cooked Indian food varies with oil, recipe and portion size, so Nutrishi gives practical estimates rather than false precision. For packaged food, the label on the pack is the best reference.</p>
+            </details>
+            <details>
+              <summary>What if my food isn’t listed?</summary>
+              <p>Add it in seconds with manual entry and save it for next time. You can also email support@nutrishi.com and ask us to add it.</p>
+            </details>
+            <details>
+              <summary>Does it work offline?</summary>
+              <p>Yes. Logging, the food database and your history all work without internet. Looking up a new barcode needs a connection.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -1173,24 +1638,18 @@
           <div class="download-band">
             <div class="download-band-content">
               <div>
-                <h2>Start tracking calories without guessing from scratch.</h2>
-                <p>Use free food estimates, log meals, plan your day, and keep your data local on iPhone and Android.</p>
+                <h2>Start tracking the food you actually eat.</h2>
+                <p>Free on iPhone and Android. No login, and your data stays on your phone.</p>
               </div>
 
-              <div class="hero-actions store-actions">
-                <a class="btn store-link" href="https://play.google.com/store/apps/details?id=com.nutrishiapp" target="_blank"
-                  rel="noopener">
-                  <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path fill="currentColor" d="M4 3.5 19.5 12 4 20.5V3.5Z" />
-                  </svg>
-                  <span>Download on Google Play</span>
+              <div class="download-qr-codes" role="group" aria-label="Scan to download Nutrishi">
+                <a class="qr-box" href="https://play.google.com/store/apps/details?id=com.nutrishiapp" target="_blank" rel="noopener" aria-label="Download Nutrishi for Android on Google Play">
+                  <img src="/assets/qr-android.png" width="144" height="144" alt="QR code for Nutrishi on Google Play" />
+                  <span>Android</span>
                 </a>
-                <a class="btn store-link" href="https://apps.apple.com/in/app/nutrishi/id6779558409" target="_blank" rel="noopener">
-                  <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path fill="currentColor"
-                      d="M16.7 12.9c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.4.7-3 .7-.6 0-1.5-.7-2.5-.6-1.3 0-2.5.8-3.1 1.9-1.4 2.4-.4 6 1 8 .7 1 1.5 2.1 2.6 2.1 1 0 1.4-.6 2.6-.6s1.5.6 2.6.6c1.1 0 1.8-1 2.5-2 .8-1.2 1.2-2.4 1.2-2.4-.1 0-2.7-1-2.7-3.9Zm-2-6c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.8-1 2.8 1 .1 2-.5 2.7-1.3Z" />
-                  </svg>
-                  <span>Download on the App Store</span>
+                <a class="qr-box" href="https://apps.apple.com/in/app/nutrishi/id6779558409" target="_blank" rel="noopener" aria-label="Download Nutrishi for iOS on the App Store">
+                  <img src="/assets/qr-ios.png" width="144" height="144" alt="QR code for Nutrishi on the App Store" />
+                  <span>iOS</span>
                 </a>
               </div>
             </div>
@@ -1214,7 +1673,7 @@
 
     <footer>
       <div class="container footer-inner">
-        <div>© 2026 Nutrishi. All rights reserved.</div>
+        <div>© 2026 Nutrishi. Built in Hyderabad by <a href="https://actualpixel.in/" target="_blank" rel="noopener">Actual Pixel LLP</a>.</div>
         <div class="footer-links">
           <a class="store-link" href="https://play.google.com/store/apps/details?id=com.nutrishiapp" target="_blank"
             rel="noopener">
